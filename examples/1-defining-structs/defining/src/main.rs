@@ -3,13 +3,15 @@
 struct Person {
     first_name: String,
     last_name: String,
-    age: u8,
+    age: Option<u8>,
 }
 
 fn main() {
-    println!("{:?}", Person {
-        first_name: "John".to_string(),
-        last_name: "Doe".to_string(),
-        age: 25,
-    });
+    let alfredo = Person {
+        first_name: "Alfredo".to_string(),
+        last_name: "Sanchez".to_string(),
+        age: Some(23),
+    };
+    println!("The person's first name is: {}", alfredo.first_name);
+    println!("The person's age is {:?}", alfredo.age);
 }
